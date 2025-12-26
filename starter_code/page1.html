@@ -1,0 +1,13 @@
+<header>
+    <h1>Welcome from page 1</h1>
+</header>
+<button onclick="changeShellColor()">Change Shell Color</button>
+
+<script>
+    function changeShellColor() {
+        window.parent.postMessage( //postMessage to parent window
+            "changeShellColor",
+            window.location.origin
+        );
+    }
+</script>
